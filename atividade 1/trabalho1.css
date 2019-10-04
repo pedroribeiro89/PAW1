@@ -1,0 +1,126 @@
+body {
+	font-family: 'Open Sans', sans-serif;
+	background-color: #121212;
+	color: white;
+	padding: 50px;
+}
+
+header {
+	margin: 0 auto;
+}
+
+h1 {
+	text-align: center;
+}
+
+section {
+	background-color: #272727;
+	padding: 10px;
+	border-radius: 5px;
+	box-shadow: 0 19px 38px rgba(0, 0, 0, 1), 0 15px 12px rgba(0, 0, 0, 1);
+	overflow: auto;
+	width: 70%;
+	margin: 0 auto 20px auto;
+}
+
+h2 {
+	color: gray;
+	margin-top: 0;
+}
+
+figure {
+	float: left;
+	width: 30%;
+	margin: 0 auto;
+}
+
+figcaption {
+	text-align: center;
+}
+
+img {
+	width: 100%;
+}
+
+dl {
+	padding: 20px;
+	width: 50%;
+	margin: 0 auto;
+}
+
+#movie-data-list {
+	float: right;
+}
+
+dt {
+	text-align: center;
+	font-weight: bold;
+	color: #4BB2F9;
+	font-size: 20px;
+}
+
+dd {
+	margin-left: unset;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+#imglist {
+	width: 100%;
+}
+
+#imglist ul {
+	list-style-type: none;
+	list-style: none;
+	float: left;
+	margin: 0;
+	width: 25%;
+}
+
+#imglist ul li {
+	float: left;
+	vertical-align: middle;
+	margin: 0;
+}
+
+#imglist ul img {
+	width: 70%;
+}
+
+#imglist figure {
+	width: 70%;
+}
+
+@media (max-width: 900px) 
+{
+  #imglist figure {
+	width: 59%;
+  }
+}
+
+.selected-image {
+    border: 5px solid #4BB2F9;
+    border-radius: 3px;
+}
+
+#trailer-section {
+	position: relative;
+    padding-bottom: 50%;
+}
+iframe {
+	position: absolute;
+    width: 95%;
+    height: 70%;
+}
+
+#synopsis {
+	padding: 20px;
+}
+
+footer {
+	text-align: center;
+}
+
+footer a {
+	color: #4BB2F9;
+}
