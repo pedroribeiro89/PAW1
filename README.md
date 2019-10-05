@@ -29,9 +29,9 @@ Usando jQuery e Bootstrap, construa uma página interativa que contenha um extra
 
 Os requisitos para este projetos são:
 
--A tabela deve ser formatada com Bootstrap e os  valores negativos devem aparecer em vermelho, enquanto os valores positivos devem aparecer em preto. 
--Deve ser possível ordenar a tabela por data (1ª coluna) e por código (2ª coluna).
--Deve haver um formulário para que o usuário cadastre novos lançamentos. Os campos desse formulário devem ser controlados ou validados para que o usuário não informe valores incompatíveis com o campo.
--Todos os lançamentos devem ser armazenados localmente, por meio da API Local Storage. Assim, tanto a construção inicial da tabela quanto o registro de novos lançamentos deve ser feita por meio dos dados armazenados localmente.
--Deve ser possível alterar os campos descrição e valor de um lançamento qualquer.
--Deve ser possível excluir um lançamento qualquer.
+- A tabela deve ser formatada com Bootstrap e os  valores negativos devem aparecer em vermelho, enquanto os valores positivos devem aparecer em preto.
+- Deve ser possível ordenar a tabela por data (1ª coluna) e por código (2ª coluna).
+- Deve haver um formulário para que o usuário cadastre novos lançamentos. Os campos desse formulário devem ser controlados ou validados para que o usuário não informe valores incompatíveis com o campo.
+- Todos os lançamentos devem ser armazenados localmente, por meio da API Local Storage. Assim, tanto a construção inicial da tabela quanto o registro de novos lançamentos deve ser feita por meio dos dados armazenados localmente.
+- Deve ser possível alterar os campos descrição e valor de um lançamento qualquer.
+- Deve ser possível excluir um lançamento qualquer.
