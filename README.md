@@ -24,6 +24,8 @@ os códigos devem ser válidos (use o HTML5 Validator e o CSS Validator)
 Em seguida, usando a JavaScript, você deve ajustar a sua página para permitir a visualização ampliada de imagens do filme, a partir das suas versões reduzidas (thumbnails), da mesma forma que as lojas virtuais usam
 Ao clicarmos nas imagens pequenas (thumbnails), a imagem grande deve ser alterada e a imagem pequena deve receber algum destaque ou realce. Essa operação deve ocorrer necessariamente por meio de uma função JavaScript.
 
+Foi feito uma pagina do filme Era uma vez em hollywood. com dados do adorocinema.com e imdb.com 
+
 ## Atividade 2
 Usando jQuery e Bootstrap, construa uma página interativa que contenha um extrato bancário. Use uma tabela para representar esse extrato. Para cada linha da tabela, deve haver uma data, um código de lançamento, uma descrição do lançamento, o valor do lançamento e o saldo da conta, como mostrado abaixo:
 
@@ -35,3 +37,5 @@ Os requisitos para este projetos são:
 - Todos os lançamentos devem ser armazenados localmente, por meio da API Local Storage. Assim, tanto a construção inicial da tabela quanto o registro de novos lançamentos deve ser feita por meio dos dados armazenados localmente.
 - Deve ser possível alterar os campos descrição e valor de um lançamento qualquer.
 - Deve ser possível excluir um lançamento qualquer.
+
+Foi feito um arquivo js extra com a implementacao de um quicksort para ser utilizado na ordenacao da tabela, com a motivação de treinar IIFE(Immediately-invoked function expression)
