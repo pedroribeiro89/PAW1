@@ -105,12 +105,12 @@ function removeStmtItem(id) {
 
 // SORT
 function sortByDate() {
-	// stmt.sort((a, b) => { return new Date(a.item_date).getTime() - new Date(b.item_date).getTime(); });
+	// JAVASCRIPT SORT: stmt.sort((a, b) => { return new Date(a.item_date).getTime() - new Date(b.item_date).getTime(); });
 	mysort(stmt, (a, b) => { return new Date(a.item_date).getTime() - new Date(b.item_date).getTime(); });
 	saveRebuildStmtDOM();
 }
 function sortByCode() {
-	// stmt.sort((a, b) => { return a.code - b.code; });
+	// JAVASCRIPT SORT: stmt.sort((a, b) => { return a.code - b.code; });
 	mysort(stmt, (a, b) => { return a.code - b.code; });
 	saveRebuildStmtDOM();
 }
