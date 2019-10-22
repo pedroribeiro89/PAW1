@@ -1,0 +1,18 @@
+.tables-section {
+	display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.tables-section h2 {
+    flex: 0 0 100%;
+}
+
+.tables-section table {
+	flex: 1;
+}
+
+#selected-task {
+	color: black;
+	text-align: center;
+}

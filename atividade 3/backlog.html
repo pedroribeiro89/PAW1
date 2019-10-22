@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- Meta tags Obrigatórias -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="backlog.css">
+    <title>Scrum Simples - Backlog</title>
+  </head>
+  <body>
+	
+  	<nav class="navbar navbar-dark navbar-expand-lg ">
+      <a class="navbar-brand" href="home.html">Scrum Simples</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="home.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="backlog.html">Backlog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="kanban.html">Kanban</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="#">Estatísticas</a>
+          </li> -->
+        </ul>
+      </div>
+    </nav>
+	 
+    <main>
+      <h1>Backlog</h1>
+
+      <button type="button" class="btn scrum-button" data-toggle="modal" data-target="#createTaskModal" id="createTaskBtn">
+        Criar Tarefa
+      </button>
+
+      <!-- Modal -->
+      <div class="modal fade" id="createTaskModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Criar tarefa no backlog</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+              <form class="needs-validation" id="createTaskForm" novalidate>
+                <div class="form-group">
+                  <label for="descriptionInput">Nome</label>
+                  <textarea class="form-control" id="nameInput" rows="3" required></textarea>
+                  <div class="invalid-feedback">Digite o nome</div>
+                </div>
+                <div class="form-group">
+                  <label for="descriptionInput">Descrição</label>
+                  <textarea class="form-control" id="descriptionInput" rows="3"></textarea>
+                  <div class="invalid-feedback">Digite uma descrição</div>
+                </div>
+                <div class="form-group">
+                  <label for="storyPointsInput">Story Points</label>
+                  <input type="number" class="form-control" id="storyPointsInput" placeholder="" required>
+                  <div class="invalid-feedback">Digite o story points</div>
+                </div>
+                <div class="form-group">
+                  <select class="form-control">
+                    <option>baixa</option>
+                    <option>média</option>
+                    <option>alta</option>
+                  </select>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+              <button type="submit" class="btn btn-primary" id="modalButton">Adicionar item</button>
+            </div>
+          </div>
+         </div>
+      </div>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Descrição</th>
+            <th scope="col">Story Points</th>
+            <th scope="col">Prioridade</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- <tr>
+            <td>1</td>
+            <td>tarefa 1</td>
+            <td>bla blab abalba alb ablablab albb</td>
+            <td>5</td>
+            <td>1</td> 
+            <td>
+              <button type="button" class="btn btn-outline-danger">Adicionar Sprint</button>
+              <button type="button" class="btn btn-outline-danger">Deletar</button>
+            </td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>tarefa 1</td>
+            <td>bla blab abalba alb ablablab albb</td>
+            <td>5</td>
+            <td>1</td>
+            <td>
+              <button type="button" class="btn btn-outline-danger">Adicionar Sprint</button>
+              <button type="button" class="btn btn-outline-danger">Deletar</button>
+            </td>
+          <tr>
+            <td>1</td>
+            <td>tarefa 1</td>
+            <td>bla blab abalba alb ablablab albb</td>
+            <td>5</td>
+            <td>1</td>
+            <td>
+              <button type="button" class="btn btn-outline-danger">Adicionar Sprint</button>
+              <button type="button" class="btn btn-outline-danger">Deletar</button>
+            </td>
+          </tr> -->
+        </tbody>
+      </table>
+
+      <h1>Próxima Sprint</h1>
+      
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Descrição</th>
+            <th scope="col">Story Points</th>
+            <th scope="col">Prioridade</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- <tr>
+            <td>1</td>
+            <td>tarefa 1</td>
+            <td>bla blab abalba alb ablablab albb</td>
+            <td>5</td>
+            <td>1</td>
+            <td><button type="button" class="btn btn-outline-danger">Remover</button></td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>tarefa 1</td>
+            <td>bla blab abalba alb ablablab albb</td>
+            <td>5</td>
+            <td>1</td>
+            <td><button type="button" class="btn btn-outline-danger">Remover</button></td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>tarefa 1</td>
+            <td>bla blab abalba alb ablablab albb</td>
+            <td>5</td>
+            <td>1</td>
+            <td><button type="button" class="btn btn-outline-danger">Remover</button></td>
+          </tr> -->
+        </tbody>
+      </table>
+
+
+    </main>
+
+    <!-- JavaScript (Opcional) -->
+    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="backlog.js"></script>
+  </body>
+</html>
