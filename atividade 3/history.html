@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- Meta tags Obrigatórias -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="history.css">
+    <title>Scrum Simples - Histórico</title>
+  </head>
+  <body>
+	
+  	<nav class="navbar navbar-dark navbar-expand-lg ">
+      <a class="navbar-brand" href="home.html">Scrum Simples</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="home.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="backlog.html">Backlog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="kanban.html">Kanban</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="history.html">Histórico</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+	 	    	<!-- <option value="1">baixa</option>
+	        <option value="2" selected>média</option>
+	        <option value="3">alta</option> -->
+    <main>
+       <h1>Histórico</h1>
+
+      <article>
+	  	<h2>Sprints</h2>
+	    <select class="form-control select-sprint" id="sprintSelect"></select>
+	    <table class="table">
+	    	<thead>
+	        	<tr>
+		            <th scope="col">ID</th>
+		            <th scope="col">Nome</th>
+		            <th scope="col">Descrição</th>
+		            <th scope="col">Story Points</th>
+		            <th scope="col">Prioridade</th>
+	          	</tr>
+	        </thead>
+	        <tbody id="sprintBody">
+	        </tbody>
+	     </table>
+	  </article> 
+
+	  <article class="statistics">
+	  	<h2>Estatísticas das Tarefas</h2>
+	  	<section class="card" style="width: 18rem;">
+			<div class="card-body">
+			    <h3 class="card-title">Número de Tarefas</h3>
+			    <p class="card-text" id="tasks-number"></p>
+			</div>
+		</section>
+
+		<section class="card" style="width: 18rem;">
+			<div class="card-body">
+			    <h3 class="card-title">Tarefas no Backlog</h3>
+			    <p class="card-text" id="tasks-backlog"></p>
+			</div>
+		</section>
+
+		<section class="card" style="width: 18rem;">
+			<div class="card-body">
+				<h3 class="card-title">Tarefas Concluídas</h3>
+			    <p class="card-text" id="tasks-done"></p>
+			</div>
+		</section>
+	  </article>
+
+	  <article class="statistics">
+	  	<h2>Estatísticas das Sprints</h2>
+
+		<section class="card" style="width: 18rem;">
+			<div class="card-body">
+				<h3 class="card-title">Número de Sprints</h3>
+			    <p class="card-text" id="sprint-number"></p>
+			</div>
+		</section>
+
+		<section class="card" style="width: 18rem;">
+			<div class="card-body">
+				<h3 class="card-title">Média de tarefas por Sprint</h3>
+			    <p class="card-text" id="sprint-task-avg"></p>
+			</div>
+		</section>
+
+		<section class="card" style="width: 18rem;">
+			<div class="card-body">
+				<h3 class="card-title">Máximo de tarefas em uma Sprint</h3>
+			    <p class="card-text" id="sprint-max-task"></p>
+			</div>
+		</section>
+	  </article>
+
+	  <article class="statistics">
+	  	<h2>Estatísticas dos Pontos</h2>
+
+		<section class="card" style="width: 18rem;">
+			<div class="card-body">
+				<h3 class="card-title">Número de pontos Realizados</h3>
+			    <p class="card-text" id="point-number"></p>
+			</div>
+		</section>
+
+		<section class="card" style="width: 18rem;">
+			<div class="card-body">
+				<h3 class="card-title">Média de pontos por Sprint</h3>
+			    <p class="card-text" id="point-sprint-avg"></p>
+			</div>
+		</section>
+
+		<section class="card" style="width: 18rem;">
+			<div class="card-body">
+				<h3 class="card-title">Total de pontos no backlog</h3>
+			    <p class="card-text" id="point-backlog"></p>
+			</div>
+		</section>
+	  </article>
+
+    </main>
+
+    <!-- JavaScript (Opcional) -->
+    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="history.js"></script>
+  </body>
+</html>

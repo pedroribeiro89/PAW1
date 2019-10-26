@@ -21,42 +21,36 @@
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
+          <li class="nav-item">
             <a class="nav-link" href="home.html">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="backlog.html">Backlog</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item active">
             <a class="nav-link" href="kanban.html">Kanban</a>
           </li>
-          <!-- <li class="nav-item">
-            <a class="nav-link" href="#">Estatísticas</a>
-          </li> -->
+          <li class="nav-item">
+            <a class="nav-link" href="history.html">Histórico</a>
+          </li>
         </ul>
       </div>
     </nav>
 	 
-    <main>
+   <section id="start-sprint" hidden>
+        <h2> Inicie uma Sprint </h2>
+    </section>
+    <main id="main" hidden>
     	<h1>Kanban</h1>
       <section class="tables-section">
-      	<h2>Sprint 1</h2>
+      	<h2 id="sprint-title">Sprint</h2>
 	      <table class="table table-hover">
 	        <thead>
 	          <tr>
 	            <th scope="col">A fazer</th>
 	          </tr>
 	        </thead>
-	        <tbody>
-	          <tr>
-	            <td>1 - tarefa 1</td>
-	          </tr>
-	          <tr>
-	            <td>1 - tarefa 1</td>
-	          </tr>
-	          <tr>
-	            <td>1 - tarefa 1</td>
-	          </tr>
+	        <tbody id="todoBody">
 	        </tbody>
 	      </table>
 	      
@@ -66,16 +60,7 @@
 	            <th scope="col">Fazendo</th>
 	          </tr>
 	        </thead>
-	        <tbody>
-	          <tr>
-	            <td>1 - tarefa 1</td>
-	          </tr>
-	          <tr>
-	            <td>1 - tarefa 1</td>
-	          </tr>
-	          <tr>
-	            <td>1 - tarefa 1</td>
-	          </tr>
+	        <tbody id="doingBody">
 	        </tbody>
 	      </table>
 
@@ -85,26 +70,15 @@
 	            <th scope="col">Feito</th>
 	          </tr>
 	        </thead>
-	        <tbody>
-	          <tr>
-	            <td>1 - tarefa 1</td>
-	          </tr>
-	          <tr>
-	            <td>1 - tarefa 1</td>
-	          </tr>
-	          <tr>
-	            <td>1 - tarefa 1</td>
-	          </tr>
+	        <tbody id="doneBody">
 	        </tbody>
 	      </table>
       </section>
-      <section id="selected-task">
-      	<h2> 1 - tarefa 1 </h2>
-      	<p>O que fazer: desccricao blabla balbmalbalbmalbmlabmlabmab</p>
-      	<p>Story Points: 4</p>
-      	<p>Prioridade: alta</p>
-      	<button type="button" class="btn btn-outline-danger">Marcar como A Fazer</button>
-      	<button type="button" class="btn btn-outline-danger">Marcar como Feito</button>
+      <section id="selected-task" hidden>
+        <h2> Tarefa Selecionada </h2>
+      </section>
+      <section id="select-task">
+      	<h2> Selecione uma Tarefa </h2>
       </section>
     </main>
 
@@ -113,6 +87,6 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  
+  	<script src="kanban.js"></script>
   </body>
 </html>

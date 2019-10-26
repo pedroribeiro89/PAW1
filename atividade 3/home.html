@@ -7,7 +7,8 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<link rel="stylesheet" href="main.css">
+	  <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="home.css">
     <title>Scrum Simples</title>
   </head>
   <body>
@@ -28,35 +29,62 @@
           <li class="nav-item">
             <a class="nav-link" href="kanban.html">Kanban</a>
           </li>
-          <!-- <li class="nav-item">
-            <a class="nav-link" href="#">Estatísticas</a>
-          </li> -->
+          <li class="nav-item">
+            <a class="nav-link" href="history.html">Histórico</a>
+          </li>
         </ul>
       </div>
     </nav>
 
 	<main>
-		<section class="card" style="width: 18rem;">
-			<div class="card-body">
-					<!-- font-size: 1.25rem; -->
-			    <h2 class="card-title">Tarefas no Backlog</h2>
-			    <p class="card-text">15</p>
-			</div>
-		</section>
+		<article>
+      <h1>Scrum Simples</h1>
+      <section>
+        <h2>Home</h2>
+        <p>
+          O scrum simples é um protótipo de uma página para auxiliar o scrum de um projeto.
+          Esta primeira versão fornece funcionalidades de backlog, kanban da sprint 
+          e histórico de sprints.
+        </p>
+      </section>
 
-		<article class="card" style="width: 18rem;">
-			<div class="card-body">
-			    <h2 class="card-title">Tarefas da Sprint</h2>
-			    <p class="card-text">4/15</p>
-			</div>
-		</article>
+      <section>
+        <h2>Backlog</h2>
+        <p>
+          Comece por aqui criando tarefas no backlog. Deve ser definido um nome, 
+          descrição, valor em Story Points e a prioridade.
+        </p>
+        <p>
+          Conforme definido no scrum, elas são ordenadas automáticamente por sua prioridade.
+        </p>
+        <p>
+          Após encher seu backlog, você pode deletar as tarefas que deseja cancelar ou adiciona-las 
+          a próxima sprint.
+        </p>
+        <p>
+          Após preencher a sprint com as tarefas que voce deseja realizar, você pode iniciá-la.
+          Ao iniciar uma nova sprint, as tarefas realizadas da sprint atual serão registradas
+          no histórico e as não realizadas serão adicionadas na nova sprint.
+        </p>
+      </section>
 
-		<article class="card" style="width: 18rem;">
-			<div class="card-body">
-				<h2 class="card-title">Tarefas Realizadas</h2>
-			    <p class="card-text">35/100</p>
-			</div>
-		</article>
+      <section>
+        <h2>Kanban</h2>
+        <p>
+          O kanban apresenta 3 tabelas com as tarefas da Sprint em seus respectivos status. 
+          Ao selecionar uma tarefa, é possivél ver seus detalhes e mudar 
+          seu status como "a fazer", "fazendo" ou "feito".
+        </p>
+      </section>
+
+      <section>
+        <h2>Histórico</h2>
+        <p>
+          No histórico é possivel vizualizar a lista de tarefas realizadas em cada sprint e
+          diversas estatísticas sobre a produtividade da sua equipe.
+        </p>
+      </section>
+    </article>
 	</main>
 
     <!-- Optional JavaScript -->

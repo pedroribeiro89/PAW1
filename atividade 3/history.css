@@ -1,0 +1,29 @@
+.select-sprint {
+	width: 100%;
+	margin: 15px auto;
+  	display: block;
+}
+
+.statistics {
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 10px
+}
+
+.statistics h2 {
+    flex: 0 0 100%;
+}
+
+.statistics section {
+    flex: 1;
+    margin: 5px;
+}
+
+@media (min-width: 800px) {
+	.select-sprint {
+		width: 25%;
+	}
+	.statistics {
+		display: flex;
+	}
+}

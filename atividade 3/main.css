@@ -27,3 +27,15 @@ nav a, button {
 table {
 	text-align: center;
 }
+
+.high-priority {
+	color: red;
+}
+
+.medium-priority {
+	color: green;
+}
+
+.low-priority {
+	color: black;
+}

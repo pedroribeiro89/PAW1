@@ -21,18 +21,18 @@
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
+          <li class="nav-item">
             <a class="nav-link" href="home.html">Home</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item active">
             <a class="nav-link" href="backlog.html">Backlog</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="kanban.html">Kanban</a>
           </li>
-          <!-- <li class="nav-item">
-            <a class="nav-link" href="#">Estatísticas</a>
-          </li> -->
+          <li class="nav-item">
+            <a class="nav-link" href="history.html">Histórico</a>
+          </li>
         </ul>
       </div>
     </nav>
@@ -45,11 +45,11 @@
       </button>
 
       <!-- Modal -->
-      <div class="modal fade" id="createTaskModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal fade" id="createTaskModal" tabindex="-1" role="dialog" aria-labelledby="createTaskModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Criar tarefa no backlog</h5>
+              <h5 class="modal-title" id="createTaskModalLabel">Criar tarefa no backlog</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
                   <span aria-hidden="true">&times;</span>
                 </button>
@@ -72,10 +72,10 @@
                   <div class="invalid-feedback">Digite o story points</div>
                 </div>
                 <div class="form-group">
-                  <select class="form-control">
-                    <option>baixa</option>
-                    <option>média</option>
-                    <option>alta</option>
+                  <select class="form-control" id="priorityInput" size="3" required>
+                    <option value="1">baixa</option>
+                    <option value="2" selected>média</option>
+                    <option value="3">alta</option>
                   </select>
                 </div>
               </form>
@@ -96,42 +96,10 @@
             <th scope="col">Descrição</th>
             <th scope="col">Story Points</th>
             <th scope="col">Prioridade</th>
-            <th scope="col"></th>
+            <th scope="col">Ações</th>
           </tr>
         </thead>
-        <tbody>
-          <!-- <tr>
-            <td>1</td>
-            <td>tarefa 1</td>
-            <td>bla blab abalba alb ablablab albb</td>
-            <td>5</td>
-            <td>1</td> 
-            <td>
-              <button type="button" class="btn btn-outline-danger">Adicionar Sprint</button>
-              <button type="button" class="btn btn-outline-danger">Deletar</button>
-            </td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>tarefa 1</td>
-            <td>bla blab abalba alb ablablab albb</td>
-            <td>5</td>
-            <td>1</td>
-            <td>
-              <button type="button" class="btn btn-outline-danger">Adicionar Sprint</button>
-              <button type="button" class="btn btn-outline-danger">Deletar</button>
-            </td>
-          <tr>
-            <td>1</td>
-            <td>tarefa 1</td>
-            <td>bla blab abalba alb ablablab albb</td>
-            <td>5</td>
-            <td>1</td>
-            <td>
-              <button type="button" class="btn btn-outline-danger">Adicionar Sprint</button>
-              <button type="button" class="btn btn-outline-danger">Deletar</button>
-            </td>
-          </tr> -->
+        <tbody id="backlogBody">
         </tbody>
       </table>
 
@@ -148,34 +116,34 @@
             <th scope="col"></th>
           </tr>
         </thead>
-        <tbody>
-          <!-- <tr>
-            <td>1</td>
-            <td>tarefa 1</td>
-            <td>bla blab abalba alb ablablab albb</td>
-            <td>5</td>
-            <td>1</td>
-            <td><button type="button" class="btn btn-outline-danger">Remover</button></td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>tarefa 1</td>
-            <td>bla blab abalba alb ablablab albb</td>
-            <td>5</td>
-            <td>1</td>
-            <td><button type="button" class="btn btn-outline-danger">Remover</button></td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>tarefa 1</td>
-            <td>bla blab abalba alb ablablab albb</td>
-            <td>5</td>
-            <td>1</td>
-            <td><button type="button" class="btn btn-outline-danger">Remover</button></td>
-          </tr> -->
+        <tbody id="sprintBody">
         </tbody>
       </table>
 
+      <button type="button" class="btn scrum-button" data-toggle="modal" data-target="#startSprintModal" id="startSprintBtn" hidden>
+        Começar Sprint
+      </button>
+
+      <div class="modal fade" id="startSprintModal" tabindex="-1" role="dialog" aria-labelledby="startSprintModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="startSprintModalLabel">Tem certeza que quer iniciar uma nova Sprint?</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              Ao iniciar, a sprint atual será encerrada e as tarefas não concluídas
+              serão transferidas para nova sprint
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" id="sprintButton">Iniciar Sprint</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
     </main>
 

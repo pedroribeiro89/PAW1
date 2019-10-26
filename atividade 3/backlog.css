@@ -1,5 +1,4 @@
-#createTaskBtn {
+#createTaskBtn, #startSprintBtn {
 	margin: 15px auto;
   	display: block;
 }
-
